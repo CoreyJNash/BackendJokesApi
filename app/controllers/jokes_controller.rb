@@ -10,7 +10,8 @@ class JokesController < OpenReadController
 
   # GET /jokes/1
   def show
-    render json: @joke
+    # render json: @joke
+    render json: Joke.find()
   end
 
   # POST /jokes
@@ -42,11 +43,14 @@ class JokesController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_joke
-      @joke = Joke.find(params[:id])
+      # @joke = Joke.find(params[:id])
+      @joke = current_user.jokes.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
     def joke_params
       params.require(:joke).permit(:title, :joke, :writer)
     end
+  
+  private :set_joke, :joke_params
 end
