@@ -1,5 +1,9 @@
-WDI-PVD-03 CAPSTONE PROJECT - FRONT END CLIENT THE JOKE BOOK SITE
+WDI-PVD-03 CAPSTONE PROJECT - BACKEND CLIENT THE JOKE BOOK SITE
 ==========================================================
+
+FRONTEND REPO LINK:
+-------------------
+https://github.com/CoreyJNash/Jokebook-client
 
 OVERVIEW:
 ---------
@@ -34,4 +38,4 @@ I would like to add a comment section to the jokes log so people could comment o
 
 WIREFRAME:
 ----------
-[WIREFRAME]: https://i.imgur.com/odIAJg5.jpg
+[WIREFRAME]: https://i.imgur.com/odIAJg5.jpg 
