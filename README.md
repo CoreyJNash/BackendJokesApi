@@ -46,7 +46,7 @@ TECH USED:
 
 ROUTS AND METHODS:
 -------------------
-*Summary:*
+*Summary:* JOKES:
 
 <table>
 <tr>
@@ -69,7 +69,7 @@ ROUTS AND METHODS:
 </tr>
 <tr>
   <td colspan="3">
-  The default is to retrieve all games..
+  The default is to retrieve all jokes..
   </td>
   <td>401 Unauthorized</td>
   <td><em>empty</em></td>
@@ -108,6 +108,77 @@ ROUTS AND METHODS:
 <tr>
   <td colspan="3"></td>
   <td>404 Not Found</td>
+  <td><em>empty</em></td>
+</tr>
+</table>
+
+## User Actions
+
+*Summary:*
+
+<table>
+<tr>
+  <th colspan="4">Request</th>
+  <th colspan="2">Response</th>
+</tr>
+<tr>
+  <th>Verb</th>
+  <th>URI</th>
+  <th>body</th>
+  <th>Headers</th>
+  <th>Status</th>
+  <th>body</th>
+</tr>
+<tr>
+<td>POST</td>
+<td>`/sign-up`</td>
+<td><strong>credentials</strong></td>
+<td>empty</td>
+<td>201, Created</td>
+<td><strong>user</strong></td>
+</tr>
+<tr>
+  <td colspan="4"></td>
+  <td>400 Bad Request</td>
+  <td><em>empty</em></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>`/sign-in`</td>
+<td><strong>credentials</strong></td>
+<td>empty</td>
+<td>200 OK</td>
+<td><strong>user w/token</strong></td>
+</tr>
+<tr>
+  <td colspan="4"></td>
+  <td>401 Unauthorized</td>
+  <td><em>empty</em></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>`/sign-out`</td>
+<td>empty</td>
+<td><strong>token</strong></td>
+<td>201 Created</td>
+<td>empty</td>
+</tr>
+<tr>
+  <td colspan="4"></td>
+  <td>401 Unauthorized</td>
+  <td><em>empty</em></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>`/change-password`</td>
+<td><strong>passwords</strong></td>
+<td><strong>token</strong></td>
+<td>204 No Content</td>
+<td><strong>user w/token</strong></td>
+</tr>
+<tr>
+  <td colspan="4"></td>
+  <td>400 Bad Request</td>
   <td><em>empty</em></td>
 </tr>
 </table>
