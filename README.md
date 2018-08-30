@@ -13,6 +13,11 @@ LINK TO DEPLOYED FRONTEND:
 --------------------------
 https://coreyjnash.github.io/Jokebook-client/
 
+REPO SETUP INSTRUCTIONS:
+------------------------
+Run: ```Bundle Install```
+This installed any dependancies that were needed to run back end servers. 
+
 OVERVIEW:
 ---------
 
@@ -38,6 +43,87 @@ TECH USED:
 - Heroku 
 - Github 
 
+
+ROUTS AND METHODS:
+-------------------
+*Summary:*
+
+<table>
+<tr>
+  <th colspan="3">Request</th>
+  <th colspan="2">Response</th>
+</tr>
+<tr>
+  <th>Verb</th>
+  <th>URI</th>
+  <th>body</th>
+  <th>Status</th>
+  <th>body</th>
+</tr>
+<tr>
+<td>GET</td>
+<td></td>
+<td>n/a</td>
+<td>200, OK</td>
+<td><strong>jokes found</strong></td>
+</tr>
+<tr>
+  <td colspan="3">
+  The default is to retrieve all games..
+  </td>
+  <td>401 Unauthorized</td>
+  <td><em>empty</em></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>`/jokes`</td>
+<td>n/a</td>
+<td>201, Created</td>
+<td><strong>joke created</strong></td>
+</tr>
+<tr>
+  <td colspan="3">
+  </td>
+  <td>401 Unauthorized</td>
+  <td><em>empty</em></td>
+</tr>
+<tr>
+  <td colspan="3">
+  </td>
+  <td>400 Bad Request</td>
+  <td><strong>errors</strong></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>`/jokes/:id`</td>
+<td><strong>jokes delta</strong></td>
+<td>200, OK</td>
+<td><strong>joke updated</strong></td>
+</tr>
+<tr>
+  <td colspan="3"></td>
+  <td>400 Bad Request</td>
+  <td><strong>errors</strong></td>
+</tr>
+<tr>
+  <td colspan="3"></td>
+  <td>404 Not Found</td>
+  <td><em>empty</em></td>
+</tr>
+</table>
+
+## API End Points
+
+| Verb   | URI Pattern            | Controller#Action |
+|--------|------------------------|-------------------|
+| POST   | `/sign-up`             | `users#signup`    |
+| POST   | `/sign-in`             | `users#signin`    |
+| DELETE | `/sign-out`            | `users#signout`   |
+| PATCH  | `/change-password`     | `users#changepw`  |
+| GET    | `/jokes`               | `jokes#index`     |
+| POST   | `/jokes`               | `jokes#create`    |
+| PATCH  | `/jokes/:id`           | `jokes#update`    |
+| DELETE | `/jokes/:id`           | `jokes#delete`    |
 
 
 WHATS LEFT:
